@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Karthik Sai Pasupuleti — PhD Researcher · Spiking Neural Networks</title>
+<meta name="description" content="PhD research on spiking neural networks for energy-efficient, event-driven object detection in autonomous driving. Research, publications and a curated literature review." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
+</head>
+<body data-page="home">
+
+<header class="nav" id="nav">
+  <a href="index.html" class="brand">
+    <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg>
+    Karthik S. Pasupuleti
+  </a>
+  <nav><ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="literature.html">Literature</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul></nav>
+  <a href="about.html#contact" class="nav-cta">Contact</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="active">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="literature.html">Literature</a><a href="about.html">About</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="bg">
+    <video autoplay muted loop playsinline poster="assets/img/hero-brain.jpg">
+      <source src="assets/video/hero-brain.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="tint"></div><div class="scrim-top"></div><div class="scrim-bot"></div>
+  <div class="hero-content reveal">
+    <div class="eyebrow">Karthik Sai Pasupuleti — PhD Researcher · AImotion Bavaria, THI</div>
+    <h1>Spiking<br/>Vision-Language-Action</h1>
+    <p class="lede">I use AI to make roads safer. My PhD at AImotion Bavaria builds <strong>vision-language-action (VLA) models with spiking neural networks</strong> — brain-inspired systems that perceive, reason and act, energy-efficiently, on neuromorphic hardware like Intel Loihi. This is a living wiki of that work.</p>
+    <div class="cta-row">
+      <a href="research.html" class="btn btn--solid">Explore Research<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a href="literature.html" class="btn btn--ghost">Literature Review</a>
+    </div>
+  </div>
+  <div class="scrollcue"><div class="mouse"></div>Scroll</div>
+</section>
+
+<!-- AT A GLANCE -->
+<section class="block tight">
+  <div class="stat-row reveal">
+    <div class="stat"><div class="n"><span class="count" data-to="49">0</span></div><div class="l">Papers curated</div></div>
+    <div class="stat"><div class="n"><span class="count" data-to="43">0</span></div><div class="l">Included in review</div></div>
+    <div class="stat"><div class="n"><span class="count" data-to="5">0</span></div><div class="l">Research themes</div></div>
+    <div class="stat"><div class="n"><span class="count" data-to="3">0</span></div><div class="l">Open research gaps</div></div>
+    <div class="stat"><div class="n">2020<span class="u">–25</span></div><div class="l">Literature span</div></div>
+  </div>
+</section>
+
+<!-- WHY SPIKES (split video) -->
+<section class="block section-alt">
+  <div class="split reveal">
+    <div class="media">
+      <div class="media-frame">
+        <video autoplay muted loop playsinline poster="assets/img/neuron-network.jpg"><source src="assets/video/neuron-network.mp4" type="video/mp4" /></video>
+        <div class="cap">Neurons communicating through spikes</div>
+      </div>
+    </div>
+    <div class="copy">
+      <div class="eyebrow">The Idea</div>
+      <h2>Compute With Spikes,<br/>Not Numbers</h2>
+      <p>Conventional deep networks process every pixel with dense arithmetic. <b>Spiking neural networks (SNNs)</b> instead communicate with sparse, asynchronous spikes — like biological neurons. Information lives in the <em>timing</em> of events, so computation happens only where and when something changes.</p>
+      <p>For autonomous driving — where milliwatts and milliseconds both matter — that promises detection that is faster at the edge and dramatically more energy-efficient than CNNs.</p>
+      <a href="research.html" class="btn btn--ghost" style="margin-top:8px">My thesis focus<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOCUS AREAS -->
+<section class="block">
+  <div class="eyebrow reveal">The VLA Pipeline</div>
+  <h2 class="reveal">What I Work On</h2>
+  <p class="intro reveal">My thesis builds a spiking vision-language-action model end to end — from event-driven perception, through vision-language reasoning, to safe action — all deployable on neuromorphic hardware.</p>
+  <div class="cards reveal">
+    <div class="card"><div class="ix">01 · Vision</div><h3>Spiking Perception</h3><p>Event-driven detection, segmentation and depth as the visual encoder — built on SNN detectors like Spiking-YOLO, SpikingYOLOX and spiking transformers.</p></div>
+    <div class="card"><div class="ix">02 · Language</div><h3>Vision-Language Alignment</h3><p>Binding spiking visual features with language for open-world understanding and reasoning — spike-based vision-language pretraining and hybrid graph-spiking alignment.</p></div>
+    <div class="card"><div class="ix">03 · Action</div><h3>Reasoning &amp; Action</h3><p>Turning perception and language into safe driving decisions — a spike-based reasoning and action layer for autonomous systems.</p></div>
+    <div class="card"><div class="ix">04 · Hardware</div><h3>Neuromorphic Deployment</h3><p>Running the full VLA pipeline on Intel Loihi for orders-of-magnitude lower energy at the edge.</p></div>
+  </div>
+</section>
+
+<!-- FEATURED FINDING -->
+<section class="block section-alt">
+  <div class="split rev reveal">
+    <div class="media">
+      <div class="media-frame">
+        <video autoplay muted loop playsinline poster="assets/img/nerve-impulse.jpg"><source src="assets/video/nerve-impulse.mp4" type="video/mp4" /></video>
+        <div class="cap">An impulse travelling a nerve fibre</div>
+      </div>
+    </div>
+    <div class="copy">
+      <div class="eyebrow">Highlight From the Review</div>
+      <h2>An SNN That Beats<br/>the ANNs</h2>
+      <p>On the GEN1 event-camera benchmark, <b>SpikeDet</b> reaches 47.6% AP at just <b>9.9 mJ</b> — surpassing ANN detectors like RVT (47.2% AP, 116.7 mJ) while using an order of magnitude less power. On COCO it hits 52.2% AP at 40.4 mJ, rivalling YOLOv12-M at 3.8× the efficiency.</p>
+      <p>The key insight: fixing <em>local firing saturation</em> improves accuracy and energy at the same time.</p>
+      <a href="literature.html" class="btn btn--ghost" style="margin-top:8px">Read the literature review<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="hero sub" id="cta">
+  <div class="bg"><video autoplay muted loop playsinline poster="assets/img/deep-brain.jpg"><source src="assets/video/deep-brain.mp4" type="video/mp4" /></video></div>
+  <div class="tint"></div><div class="scrim-top"></div><div class="scrim-bot"></div>
+  <div class="hero-content reveal">
+    <div class="eyebrow">Dive Deeper</div>
+    <h1>Explore the Work</h1>
+    <p class="lede">Walk through the thesis, browse 49 curated papers, or get in touch about collaboration and event-based perception.</p>
+    <div class="cta-row">
+      <a href="research.html" class="btn btn--solid">Research &amp; Projects</a>
+      <a href="publications.html" class="btn btn--ghost">Publications</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand"><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg>Karthik S. Pasupuleti</div>
+  <div class="fnote">© 2026 Karthik Sai Pasupuleti · Spiking Vision-Language-Action · AImotion Bavaria, THI</div>
+  <div class="flinks"><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="literature.html">Literature</a><a href="about.html">About</a></div>
+</footer>
+
+</main>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

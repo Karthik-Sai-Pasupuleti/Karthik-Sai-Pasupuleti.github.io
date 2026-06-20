@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Research &amp; Projects — Karthik Sai Pasupuleti</title>
+<meta name="description" content="PhD research on vision-language-action models with spiking neural networks for autonomous driving — perception, reasoning and action on Intel Loihi neuromorphic hardware." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
+<style>
+.vla-flow{display:flex;align-items:stretch;gap:0;flex-wrap:wrap;margin-bottom:10px}
+.vla-step{flex:1;min-width:150px;border:1px solid var(--line);border-radius:10px;padding:22px;background:#04060d;position:relative}
+.vla-step .s{font-family:Inter;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.vla-step h3{font-size:1.05rem;text-transform:none;letter-spacing:.01em;margin:8px 0 8px;font-weight:700}
+.vla-step p{color:var(--dim);font-size:13.5px;font-weight:300;line-height:1.6;text-transform:none}
+.vla-arrow{display:flex;align-items:center;color:var(--accent);font-size:1.4rem;padding:0 8px}
+@media(max-width:820px){.vla-arrow{transform:rotate(90deg);padding:6px 0;width:100%;justify-content:center}}
+.loihi-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:8px}
+.loihi-stats .s{background:#000;padding:24px 14px;text-align:center}
+.loihi-stats .v{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;color:#d4a017}
+.loihi-stats .l{font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-top:6px}
+@media(max-width:560px){.loihi-stats{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body data-page="research">
+
+<header class="nav" id="nav">
+  <a href="index.html" class="brand">
+    <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg>
+    Karthik S. Pasupuleti
+  </a>
+  <nav><ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html" class="active">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="literature.html">Literature</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul></nav>
+  <a href="about.html#contact" class="nav-cta">Contact</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="research.html" class="active">Research</a><a href="publications.html">Publications</a><a href="literature.html">Literature</a><a href="about.html">About</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero sub">
+  <div class="bg"><video autoplay muted loop playsinline poster="assets/img/cortex.jpg"><source src="assets/video/cortex.mp4" type="video/mp4" /></video></div>
+  <div class="tint"></div><div class="scrim-top"></div><div class="scrim-bot"></div>
+  <div class="hero-content reveal">
+    <div class="eyebrow">PhD · AImotion Bavaria, THI</div>
+    <h1>Research &amp; Projects</h1>
+    <p class="lede">Building <strong>vision-language-action models with spiking neural networks</strong> — brain-inspired systems that perceive the road, reason about it in language, and act safely, at a fraction of the energy of conventional AI.</p>
+  </div>
+</section>
+
+<!-- THE THESIS -->
+<section class="block">
+  <div class="eyebrow reveal">The Thesis</div>
+  <h2 class="reveal">Spiking Vision-<br/>Language-Action</h2>
+  <p class="intro reveal">Autonomous vehicles must perceive, understand and act in milliseconds and milliwatts. My PhD at AImotion Bavaria develops a <b>vision-language-action (VLA)</b> pipeline built entirely from <b>spiking neural networks</b>: an event-driven visual encoder, a vision-language layer that grounds what the car sees in language and reasoning, and an action layer that turns understanding into safe decisions — all designed to run on <b>Intel Loihi</b> neuromorphic hardware for energy-efficient, real-time deployment.</p>
+  <div class="vla-flow reveal">
+    <div class="vla-step"><div class="s">Vision</div><h3>Perceive</h3><p>Spiking detection, segmentation &amp; depth from cameras and event sensors.</p></div>
+    <div class="vla-arrow">→</div>
+    <div class="vla-step"><div class="s">Language</div><h3>Understand</h3><p>Vision-language alignment &amp; reasoning over the scene.</p></div>
+    <div class="vla-arrow">→</div>
+    <div class="vla-step"><div class="s">Action</div><h3>Act</h3><p>Spike-based decisions for safe driving behaviour.</p></div>
+    <div class="vla-arrow">→</div>
+    <div class="vla-step"><div class="s">Hardware</div><h3>Deploy</h3><p>Run the full loop on Intel Loihi at &lt;1&nbsp;W.</p></div>
+  </div>
+</section>
+
+<!-- INTERACTIVE NEURON -->
+<section class="block section-alt">
+  <div class="neuron-stage">
+    <div class="neuron-figure reveal">
+      <div class="neuron-canvas-wrap">
+        <canvas id="neuronCanvas"></canvas>
+        <svg class="neuron-labels" viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <g><line x1="150" y1="92" x2="205" y2="158"/><circle class="dot" cx="205" cy="158" r="2.6"/><text x="150" y="80" text-anchor="middle">Dendrites</text></g>
+          <g><line x1="345" y1="60" x2="345" y2="214"/><circle class="dot" cx="345" cy="214" r="2.6"/><text x="345" y="48" text-anchor="middle">Soma · Nucleus</text></g>
+          <g><line x1="408" y1="520" x2="408" y2="306"/><circle class="dot" cx="408" cy="306" r="2.6"/><text x="408" y="538" text-anchor="middle">Axon hillock</text></g>
+          <g><line x1="560" y1="520" x2="560" y2="300"/><circle class="dot" cx="560" cy="300" r="2.6"/><text x="560" y="538" text-anchor="middle">Myelin sheath</text></g>
+          <g><line x1="715" y1="520" x2="700" y2="300"/><circle class="dot" cx="700" cy="300" r="2.6"/><text x="725" y="538" text-anchor="middle">Node of Ranvier</text></g>
+          <g><line x1="930" y1="92" x2="930" y2="220"/><circle class="dot" cx="930" cy="220" r="2.6"/><text x="930" y="80" text-anchor="middle">Synaptic terminals</text></g>
+        </svg>
+      </div>
+      <div class="figure-cap">Live action potential — click <b>Stimulate</b> to drive the membrane to threshold</div>
+    </div>
+    <div class="copy reveal">
+      <div class="eyebrow">The Building Block</div>
+      <h2>Anatomy of a<br/>Spiking Neuron</h2>
+      <p><b>Dendrites</b> collect inputs (EPSPs) into the <b>soma</b>, which sums them over space and time. Past roughly <b>−55&nbsp;mV</b>, the <b>axon hillock</b> fires an all-or-nothing <b>action potential</b> down the myelinated axon to the <b>synaptic terminals</b>, then resets. Stack billions of these and you get the brain — and the spiking networks I build to imitate it.</p>
+      <div class="vwrap">
+        <div class="vhead"><span>Membrane potential <span class="vval" id="vVal">−70 mV</span></span><span class="vphase" id="vPhase">Resting</span></div>
+        <canvas id="vGraph"></canvas>
+      </div>
+      <div class="legend">
+        <span style="color:#34d2ff"><i style="background:#34d2ff"></i><span style="color:var(--faint)">Dendritic input</span></span>
+        <span style="color:#ff6a3d"><i style="background:#ff6a3d"></i><span style="color:var(--faint)">Action potential</span></span>
+        <span style="color:#7b5cff"><i style="background:#7b5cff"></i><span style="color:var(--faint)">Synaptic release</span></span>
+      </div>
+      <div class="controls">
+        <button class="btn btn--solid" id="stimBtn">Stimulate<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4.5 13H11l-1 9 8.5-11H12l1-9z"/></svg></button>
+        <button class="btn btn--ghost" id="autoBtn">Pause auto-fire</button>
+        <label class="speed">Speed <input type="range" id="speed" min="0.4" max="2" step="0.1" value="1"/></label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PhD VISION -->
+<section class="block">
+  <div class="eyebrow reveal">PhD Research Vision</div>
+  <h2 class="reveal">The <span style="color:var(--accent)">Next Frontier</span></h2>
+  <p class="intro reveal">Four building blocks, one goal — a complete spiking VLA agent for the road.</p>
+  <div class="cards reveal">
+    <div class="card"><div class="ix">01 · Vision</div><h3>Spiking Perception Module</h3><p>An event-driven visual encoder for real-time object detection, segmentation and depth — turning camera and event-sensor streams into spike-based scene representations.</p></div>
+    <div class="card"><div class="ix">02 · Language</div><h3>Vision-Language Alignment</h3><p>Grounding spiking visual features in language for open-world understanding — spike-based vision-language pretraining and graph-spiking hybrid alignment.</p></div>
+    <div class="card"><div class="ix">03 · Action</div><h3>Reasoning &amp; Action Layer</h3><p>A spike-based reasoning and action layer that lets the vehicle interpret complex traffic scenes and make safe, explainable decisions.</p></div>
+    <div class="card"><div class="ix">04 · Hardware</div><h3>Intel Loihi Deployment</h3><p>Deploying the full perception–language–action loop on Loihi 2 neuromorphic silicon for orders-of-magnitude energy savings at the edge.</p></div>
+  </div>
+</section>
+
+<!-- LOIHI -->
+<section class="block section-alt">
+  <div class="split rev reveal">
+    <div class="media">
+      <div class="media-frame">
+        <video autoplay muted loop playsinline poster="assets/img/deep-brain.jpg"><source src="assets/video/deep-brain.mp4" type="video/mp4" /></video>
+        <div class="cap">Neuromorphic, event-driven compute</div>
+      </div>
+    </div>
+    <div class="copy">
+      <div class="eyebrow">Target Hardware</div>
+      <h2>Intel Loihi 2</h2>
+      <p>Conventional GPUs burn enormous power for driving perception. Intel's Loihi 2 takes a different path — programmable neuron models, on-chip learning, and asynchronous, event-driven computation. My work aims to bridge cutting-edge spiking VLA algorithms with this neuromorphic silicon for real-time perception and reasoning at a fraction of the power budget.</p>
+      <div class="loihi-stats">
+        <div class="s"><div class="v">128</div><div class="l">Neuro cores</div></div>
+        <div class="s"><div class="v">1M+</div><div class="l">Neurons</div></div>
+        <div class="s"><div class="v">120M</div><div class="l">Synapses</div></div>
+        <div class="s"><div class="v">&lt;1W</div><div class="l">Power draw</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH QUESTIONS -->
+<section class="block">
+  <div class="eyebrow reveal">Driving Questions</div>
+  <h2 class="reveal">Research Questions</h2>
+  <p class="intro reveal">The questions framing the thesis, tracked in my literature-review knowledge base.</p>
+  <div class="reveal">
+    <div class="qa"><div class="num">01</div><div><h3>Can a spiking VLA model perceive, reason and act for autonomous driving as well as conventional deep models?</h3><p>Closing the accuracy gap between spike-based vision-language-action systems and dense ANNs for safety-critical perception and decision-making.</p></div></div>
+    <div class="qa"><div class="num">02</div><div><h3>How do SNNs compare to CNNs in accuracy and energy efficiency for real-time object detection?</h3><p>The foundational perception question — quantifying the accuracy / power trade-offs that make spiking perception viable on neuromorphic hardware.</p></div></div>
+  </div>
+</section>
+
+<!-- TOWARD VLA -->
+<section class="block section-alt">
+  <div class="eyebrow reveal">Reading Direction</div>
+  <h2 class="reveal">Toward Vision-Language-Action</h2>
+  <p class="intro reveal">Recent spiking vision-language and event-based action work shaping the language and action stages of my pipeline.</p>
+  <div class="papers reveal">
+    <div class="paper"><div class="yr">2025</div><div class="ti">SVL: Spike-Based Vision-Language Pretraining for Efficient 3D Open-World Understanding</div><div class="dm">Vision-Language</div></div>
+    <div class="paper"><div class="yr">2025</div><div class="ti">Improving Vision-Language Alignment with Graph Spiking Hybrid Networks</div><div class="dm">Vision-Language</div></div>
+    <div class="paper"><div class="yr">2024</div><div class="ti">EventBind: Learning a Unified Representation to Bind Them All for Event-Based Open-World Understanding</div><div class="dm">Event · Multimodal</div></div>
+    <div class="paper"><div class="yr">2024</div><div class="ti">ExACT: Language-Guided Conceptual Reasoning &amp; Uncertainty Estimation for Event-Based Action Recognition</div><div class="dm">Action</div></div>
+  </div>
+</section>
+
+<!-- ONGOING PROJECTS -->
+<section class="block">
+  <div class="eyebrow reveal">In Progress</div>
+  <h2 class="reveal">Ongoing Work</h2>
+  <p class="intro reveal">Turning the vision above into concrete contributions, one stage at a time.</p>
+  <div class="timeline reveal">
+    <div class="tl"><div class="when">Active</div><h3>Spiking Perception Backbone</h3><p>Benchmarking and building SNN detectors (Spiking-YOLO / SpikingYOLOX / spiking transformers) as the vision encoder for the VLA pipeline.</p></div>
+    <div class="tl"><div class="when">Active</div><h3>Spiking Vision-Language Alignment</h3><p>Adapting spike-based vision-language pretraining and graph-spiking hybrid networks to ground perception in language for driving scenes.</p></div>
+    <div class="tl"><div class="when">Next</div><h3>Reasoning &amp; Action Layer</h3><p>Designing a spike-based reasoning module that maps grounded perception to safe driving actions.</p></div>
+    <div class="tl"><div class="when">Next</div><h3>Loihi Deployment &amp; Energy Benchmarking</h3><p>Porting the pipeline to Intel Loihi 2 with a unified latency / energy benchmark across edge, neuromorphic and GPU platforms.</p></div>
+    <div class="tl"><div class="when">In preparation</div><h3>Systematic Review of SNN Object Detection</h3><p>A PRISMA survey of 49 curated papers underpinning the perception stage — see the <a href="literature.html" style="color:var(--accent)">Literature Review</a>.</p></div>
+  </div>
+</section>
+
+<!-- RESEARCH GAPS -->
+<section class="block section-alt">
+  <div class="eyebrow reveal">Open Problems</div>
+  <h2 class="reveal">Research Gaps</h2>
+  <p class="intro reveal">High-priority gaps identified across the reviewed literature — motivating the work above.</p>
+  <div class="gap-grid reveal">
+    <div class="gap"><div class="pri">High priority</div><p>No comprehensive comparison of SNN object detectors on standardised autonomous-driving benchmarks.</p></div>
+    <div class="gap"><div class="pri">High priority</div><p>Limited systematic comparison of SNNs vs CNNs on identical AD datasets with standardised energy-measurement protocols.</p></div>
+    <div class="gap"><div class="pri">High priority</div><p>Lack of unified benchmarks for latency and energy efficiency across hardware — edge devices, neuromorphic chips and GPUs.</p></div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand"><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg>Karthik S. Pasupuleti</div>
+  <div class="fnote">© 2026 Karthik Sai Pasupuleti · Spiking Vision-Language-Action · AImotion Bavaria, THI</div>
+  <div class="flinks"><a href="index.html">Home</a><a href="publications.html">Publications</a><a href="literature.html">Literature</a><a href="about.html">About</a></div>
+</footer>
+
+</main>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

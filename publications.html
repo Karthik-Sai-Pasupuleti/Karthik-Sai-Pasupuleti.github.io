@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Publications &amp; Projects — Karthik Sai Pasupuleti</title>
+<meta name="description" content="Open-source projects, papers and the in-progress systematic review by Karthik Sai Pasupuleti — spiking neural networks and computer vision for autonomous-driving safety." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
+<style>
+.pub{display:flex;gap:22px;padding:24px 4px;border-top:1px solid var(--line);align-items:flex-start}
+.pub:last-child{border-bottom:1px solid var(--line)}
+.pub .tag{flex:0 0 auto;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#000;background:var(--accent);padding:5px 10px;border-radius:3px;margin-top:3px}
+.pub .tag.soft{background:transparent;color:var(--accent);border:1px solid rgba(52,210,255,.45)}
+.pub .meta h3{font-size:1.08rem;text-transform:none;letter-spacing:.01em;font-weight:600;line-height:1.42}
+.pub .meta .auth{color:var(--dim);font-size:13.5px;font-weight:300;margin-top:7px;text-transform:none}
+.pub .meta .venue{color:var(--faint);font-size:12px;margin-top:5px;text-transform:none;font-style:italic}
+.proj-card{display:flex;flex-direction:column}
+.proj-card .gh{margin-top:auto;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:inline-flex;align-items:center;gap:7px;transition:gap .25s;padding-top:14px}
+.proj-card .gh:hover{gap:12px}
+.proj-card .gh svg{width:14px;height:14px}
+.profiles{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.profiles a{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:30px;padding:10px 18px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);transition:.2s}
+.profiles a:hover{color:#fff;border-color:rgba(255,255,255,.45)}
+</style>
+</head>
+<body data-page="publications">
+
+<header class="nav" id="nav">
+  <a href="index.html" class="brand">
+    <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg>
+    Karthik S. Pasupuleti
+  </a>
+  <nav><ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html" class="active">Publications</a></li>
+    <li><a href="literature.html">Literature</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul></nav>
+  <a href="about.html#contact" class="nav-cta">Contact</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html" class="active">Publications</a><a href="literature.html">Literature</a><a href="about.html">About</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero sub">
+  <div class="bg"><video autoplay muted loop playsinline poster="assets/img/neuron-web.jpg"><source src="assets/video/neuron-web.mp4" type="video/mp4" /></video></div>
+  <div class="tint"></div><div class="scrim-top"></div><div class="scrim-bot"></div>
+  <div class="hero-content reveal">
+    <div class="eyebrow">Projects · Papers · Review</div>
+    <h1>Publications<br/>&amp; Projects</h1>
+    <p class="lede">Open-source code spanning detection, trajectory prediction, BEV perception and driver safety — plus an in-progress systematic review of spiking object detection underpinning my VLA research.</p>
+  </div>
+</section>
+
+<!-- FLAGSHIP REVIEW -->
+<section class="block">
+  <div class="eyebrow reveal">In Preparation</div>
+  <h2 class="reveal">Flagship Work</h2>
+  <div class="reveal">
+    <div class="pub">
+      <span class="tag">Review</span>
+      <div class="meta">
+        <h3>Spiking Neural Networks vs. CNNs for Object Detection in Autonomous Driving: A Systematic Review</h3>
+        <div class="auth">Karthik Sai Pasupuleti · AImotion Bavaria, THI Ingolstadt</div>
+        <div class="venue">PRISMA systematic review · 49 records curated, 43 included · manuscript in preparation (2026)</div>
+      </div>
+    </div>
+  </div>
+  <p class="intro reveal" style="margin-top:24px">This review maps the perception foundation for my spiking vision-language-action work. See the <a href="literature.html" style="color:var(--accent)">Literature Review</a> for the full corpus, findings and PRISMA flow.</p>
+</section>
+
+<!-- OPEN-SOURCE PROJECTS -->
+<section class="block section-alt">
+  <div class="eyebrow reveal">Built &amp; Shipped</div>
+  <h2 class="reveal">Open-Source Projects</h2>
+  <p class="intro reveal">Selected repositories — computer vision and deep learning for autonomous-driving safety. All code on GitHub.</p>
+  <div class="cards reveal">
+    <div class="card proj-card"><div class="ix">Object Detection</div><h3>SSD300 — Single Shot MultiBox Detector</h3><p>PyTorch implementation of SSD300 for real-time, multi-scale object detection in driving scenes.</p><div class="tags" style="display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0"><span class="kbtag">PyTorch</span><span class="kbtag">Detection</span></div><a class="gh" href="https://github.com/kap2403/single-shot-multibox-detector-ssd300-implemented-by-pytorch" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="card proj-card"><div class="ix">Prediction</div><h3>Multi-Trajectory Prediction</h3><p>Predicting future paths of vulnerable road users — pedestrians and cyclists — for proactive collision avoidance.</p><div class="tags" style="display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0"><span class="kbtag">Trajectory</span><span class="kbtag">VRU Safety</span></div><a class="gh" href="https://github.com/kap2403/multi-trajectory-prediction" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="card proj-card"><div class="ix">Perception</div><h3>Camera-to-Bird's-Eye-View</h3><p>BEV projection with semantic segmentation using U-Net + Spatial Transformer Networks for scene understanding.</p><div class="tags" style="display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0"><span class="kbtag">U-Net</span><span class="kbtag">BEV</span></div><a class="gh" href="https://github.com/kap2403/camera-to-birds-eye-view-pytorch-" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="card proj-card"><div class="ix">3D Detection</div><h3>CenterNet — 3D Object Detection</h3><p>Anchor-free 3D detection with CenterNet, integrated with radar point-cloud fusion for richer perception.</p><div class="tags" style="display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0"><span class="kbtag">CenterNet</span><span class="kbtag">Sensor Fusion</span></div><a class="gh" href="https://github.com/kap2403/CenterNet-for-Object-Detection" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="card proj-card"><div class="ix">Driver Safety</div><h3>Drowsiness Detection — ROS2</h3><p>Real-time driver-drowsiness detection in ROS2, using facial-landmark analysis to flag eye closure and fatigue before it causes accidents.</p><div class="tags" style="display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0"><span class="kbtag">ROS2</span><span class="kbtag">Real-Time</span></div><a class="gh" href="https://github.com/Karthik-Sai-Pasupuleti/drowsiness_detection_ros2" target="_blank" rel="noopener">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  </div>
+</section>
+
+<!-- PAPERS -->
+<section class="block">
+  <div class="eyebrow reveal">Authored Work</div>
+  <h2 class="reveal">Papers &amp; Preprints</h2>
+  <p class="intro reveal">Peer-reviewed papers and preprints from my PhD will appear here. The entries below are placeholders showing the format.</p>
+  <div class="reveal">
+    <div class="pub"><span class="tag soft">Preprint</span><div class="meta"><h3>[ Add your paper title here ]</h3><div class="auth">Pasupuleti, K. S., co-authors —</div><div class="venue">Venue / arXiv ID / DOI · Year — placeholder, replace with real entry</div></div></div>
+    <div class="pub"><span class="tag soft">Conference</span><div class="meta"><h3>[ Add your conference paper here ]</h3><div class="auth">Pasupuleti, K. S., co-authors —</div><div class="venue">Proceedings · Year — placeholder, replace with real entry</div></div></div>
+  </div>
+  <p class="note reveal">Send me your publication list (or a Google Scholar / ORCID link) and I'll drop the real entries in.</p>
+</section>
+
+<!-- REFERENCE LIBRARY + PROFILES -->
+<section class="block section-alt">
+  <div class="split reveal">
+    <div class="copy">
+      <div class="eyebrow">Reference Library</div>
+      <h2>A Curated Knowledge Base</h2>
+      <p>Behind the research sits a managed reference collection — <b>1,100 references</b> in Zotero and a <b>49-paper</b> PRISMA review database, tagged by theme, domain and relevance — the backbone of my systematic review.</p>
+      <a href="literature.html" class="btn btn--ghost" style="margin-top:8px">Browse the corpus<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="copy">
+      <div class="eyebrow">Find Me</div>
+      <h2>Profiles</h2>
+      <p style="color:var(--dim);font-weight:300">My code lives on GitHub; add Scholar / ORCID once your papers are out.</p>
+      <div class="profiles">
+        <a href="https://github.com/kap2403" target="_blank" rel="noopener">GitHub · ML</a>
+        <a href="https://github.com/Karthik-Sai-Pasupuleti" target="_blank" rel="noopener">GitHub · PhD</a>
+        <a href="https://www.linkedin.com/in/karthik-sai-pasupuleti-28a301226/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#">Google Scholar</a><a href="#">ORCID</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand"><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg>Karthik S. Pasupuleti</div>
+  <div class="fnote">© 2026 Karthik Sai Pasupuleti · Spiking Vision-Language-Action · AImotion Bavaria, THI</div>
+  <div class="flinks"><a href="index.html">Home</a><a href="research.html">Research</a><a href="literature.html">Literature</a><a href="about.html">About</a></div>
+</footer>
+
+</main>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Literature Review — Karthik Sai Pasupuleti</title>
+<meta name="description" content="A PRISMA-based systematic review of 49 papers on spiking neural networks for object detection in autonomous driving — themes, findings, gaps and the full corpus." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/site.css" />
+<style>
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.chartbox{border:1px solid var(--line);border-radius:10px;padding:18px 18px 8px;background:#04060d}
+.chartbox h4{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:700;margin-bottom:10px}
+.chartbox canvas{width:100%;height:200px}
+.srcgrid{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.src{font-size:11.5px;color:var(--dim);border:1px solid var(--line);border-radius:30px;padding:8px 14px}
+.src b{color:var(--accent);font-weight:700}
+@media(max-width:760px){.charts{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-page="literature">
+
+<header class="nav" id="nav">
+  <a href="index.html" class="brand">
+    <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg>
+    Karthik S. Pasupuleti
+  </a>
+  <nav><ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="literature.html" class="active">Literature</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul></nav>
+  <a href="about.html#contact" class="nav-cta">Contact</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="literature.html" class="active">Literature</a><a href="about.html">About</a>
+</div>
+
+<main>
+
+<!-- HERO -->
+<section class="hero sub">
+  <div class="bg"><video autoplay muted loop playsinline poster="assets/img/deep-brain.jpg"><source src="assets/video/deep-brain.mp4" type="video/mp4" /></video></div>
+  <div class="tint"></div><div class="scrim-top"></div><div class="scrim-bot"></div>
+  <div class="hero-content reveal">
+    <div class="eyebrow">PRISMA Systematic Review</div>
+    <h1>Literature Review</h1>
+    <p class="lede">A living, PRISMA-tracked survey of spiking neural networks for object detection in autonomous driving — 49 records curated, 43 included, organised by theme, finding and gap. This is the perception foundation for my vision-language-action research.</p>
+  </div>
+</section>
+
+<!-- STATS + CHARTS -->
+<section class="block tight">
+  <div class="stat-row reveal" style="margin-bottom:24px">
+    <div class="stat"><div class="n"><span class="count" data-to="49">0</span></div><div class="l">Records curated</div></div>
+    <div class="stat"><div class="n"><span class="count" data-to="43">0</span></div><div class="l">Included</div></div>
+    <div class="stat"><div class="n"><span class="count" data-to="37">0</span></div><div class="l">Highly relevant</div></div>
+    <div class="stat"><div class="n"><span class="count" data-to="1100">0</span></div><div class="l">Refs in Zotero</div></div>
+  </div>
+  <div class="charts reveal">
+    <div class="chartbox"><h4>Papers by year</h4><canvas id="yearChart" data-vals="2020:1,2021:2,2022:4,2023:7,2024:14,2025:20"></canvas></div>
+    <div class="chartbox"><h4>Papers by task domain</h4><canvas id="domainChart" data-vals="Obj det:40,Segment:4,Depth:4,E2E:1" data-color="#7b5cff"></canvas></div>
+  </div>
+</section>
+
+<!-- PRISMA -->
+<section class="block section-alt">
+  <div class="eyebrow reveal">Methodology</div>
+  <h2 class="reveal">PRISMA 2020 Flow</h2>
+  <p class="intro reveal">Records move through identification, screening and eligibility into the final included set. Counts are pulled live from my review database.</p>
+  <div class="prisma reveal">
+    <div class="pbox"><div class="pn">49</div><div class="pl">Records identified &amp; deduplicated</div></div>
+    <div class="parrow"></div>
+    <div class="pbox"><div class="pn">49</div><div class="pl">Screened (title / abstract)</div></div>
+    <div class="parrow"></div>
+    <div class="pbox"><div class="pn">44</div><div class="pl">Assessed for eligibility</div></div>
+    <div class="parrow"></div>
+    <div class="pbox"><div class="pn">43</div><div class="pl">Included in synthesis · 1 excluded (off-topic)</div></div>
+  </div>
+  <div style="max-width:560px;margin:30px auto 0" class="reveal">
+    <h4 style="font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);text-align:center;margin-bottom:12px">Identification sources</h4>
+    <div class="srcgrid" style="justify-content:center">
+      <span class="src"><b>3</b> arXiv</span><span class="src"><b>2</b> Semantic Scholar</span><span class="src"><b>2</b> CrossRef / DOI</span><span class="src"><b>1</b> IEEE Xplore</span><span class="src"><b>1</b> Manual upload</span>
+    </div>
+  </div>
+</section>
+
+<!-- KEY FINDINGS -->
+<section class="block">
+  <div class="eyebrow reveal">Key Findings</div>
+  <h2 class="reveal">What the Evidence Says</h2>
+  <p class="intro reveal">A standout result from the corpus: addressing <em>local firing saturation</em> lets a spiking detector match — and on event data beat — far hungrier ANN models.</p>
+  <div class="cards reveal" style="margin-bottom:34px">
+    <div class="card"><div class="ix">Architecture</div><h3>Local firing saturation</h3><p>Adjacent neurons saturating at max firing rate — caused by variance accumulation in membrane shortcut connections — destroys feature discriminability and wastes energy. Identified as a fundamental SNN-detector problem.</p></div>
+    <div class="card"><div class="ix">Efficiency</div><h3>52.2% AP at 40.4 mJ</h3><p>SpikeDet beats the previous best SNN detector (SpikeYOLO-L: 48.9% AP, 84.2 mJ) by +3.3% AP at half the power — and matches ANN YOLOv12-M (52.5%) at 3.8× the energy efficiency on COCO 2017.</p></div>
+    <div class="card"><div class="ix">Accuracy</div><h3>Beating ANNs on event data</h3><p>On the GEN1 event-camera dataset, SpikeDet (47.6% AP, 9.9 mJ) surpasses ANN detector RVT (47.2% AP, 116.7 mJ) — the first SNN to outperform ANNs here, at an order-of-magnitude lower power.</p></div>
+  </div>
+  <div class="reveal" style="overflow-x:auto">
+    <table class="tbl">
+      <thead><tr><th>Model</th><th>Type</th><th>Benchmark</th><th>Accuracy (AP)</th><th>Power</th></tr></thead>
+      <tbody>
+        <tr><td><b>SpikeDet-X†</b></td><td class="hi">SNN</td><td>COCO 2017</td><td><b>52.2%</b></td><td>40.4 mJ</td></tr>
+        <tr><td>SpikeYOLO-L</td><td class="hi">SNN</td><td>COCO 2017</td><td>48.9%</td><td>84.2 mJ</td></tr>
+        <tr><td>YOLOv12-M</td><td>ANN</td><td>COCO 2017</td><td>52.5%</td><td>≈3.8× higher</td></tr>
+        <tr><td><b>SpikeDet</b></td><td class="hi">SNN</td><td>GEN1 (event)</td><td><b>47.6%</b></td><td>9.9 mJ</td></tr>
+        <tr><td>RVT</td><td>ANN</td><td>GEN1 (event)</td><td>47.2%</td><td>116.7 mJ</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Source: SpikeDet — “Better firing patterns for accurate and energy-efficient object detection with spiking neural networks” (2025). LFSI correlates with AP (r = −0.992) and firing rate (r = 0.955).</p>
+  </div>
+</section>
+
+<!-- THEMES -->
+<section class="block section-alt">
+  <div class="eyebrow reveal">Synthesis</div>
+  <h2 class="reveal">Themes</h2>
+  <div class="reveal" style="margin-bottom:6px">
+    <span class="kbtag">ANN-to-SNN Conversion</span>
+    <span class="kbtag">SNN vs CNN Comparison</span>
+    <span class="kbtag">SNN Object-Detection Architectures</span>
+    <span class="kbtag">SNNs for Autonomous-Driving Perception</span>
+    <span class="kbtag">Energy Efficiency &amp; Latency</span>
+  </div>
+  <p class="intro reveal" style="margin-top:18px">The corpus organises into five themes spanning conversion methods, head-to-head SNN/CNN comparison, detector architectures (Spiking-YOLO, SpikingYOLOX, spiking transformers), driving-specific perception (LiDAR, event cameras, sensor fusion) and the energy/latency story that makes spiking worthwhile.</p>
+</section>
+
+<!-- CORPUS -->
+<section class="block">
+  <div class="eyebrow reveal">The Corpus</div>
+  <h2 class="reveal">Included Papers</h2>
+  <p class="intro reveal">The included set, by task domain. Use the filters to narrow the list. Duplicate entries from multiple databases have been merged.</p>
+  <div class="filters reveal">
+    <button class="chip on" data-filter="all">All</button>
+    <button class="chip" data-filter="object_detection">Object detection</button>
+    <button class="chip" data-filter="segmentation">Segmentation</button>
+    <button class="chip" data-filter="depth_estimation">Depth estimation</button>
+  </div>
+  <div class="papers reveal">
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">One-Timestep Is Enough: High-Performance ANN-to-SNN Conversion via Scale-and-Fire Neurons</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">SpikingYOLOX: Improved YOLOX Object Detection with Fast Fourier Convolution and SNNs</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">Efficient Spiking Neural Network for RGB–Event Fusion-Based Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">SpikeDet: Better Firing Patterns for Accurate and Energy-Efficient Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">Spiking Vision Transformer with Saccadic Attention</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">Scaling Spike-Driven Transformer with Efficient Spike Firing Approximation Training</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">SpikingViT: A Multiscale Spiking Vision Transformer for Event-Based Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">SpiLiFormer: Enhancing Spiking Transformers with Lateral Inhibition</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">BNSNN: Spiking Neural Networks with Bistable Neurons for Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">Brain-Inspired Spiking Neural Networks for Energy-Efficient Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2025</div><div class="ti">A Distributed Time-of-Flight Sensor System for Autonomous Vehicles: Sensor Fusion &amp; SNN Perception</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2024</div><div class="ti">Spiking Neural Network Based on YOLO-C3 for Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2024</div><div class="ti">Spiking Neural Network for Ultralow-Latency and High-Accurate Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2024</div><div class="ti">SFOD: Spiking Fusion Object Detector</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2024</div><div class="ti">Spiking CenterNet: A Distillation-Boosted Spiking Neural Network for Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2024</div><div class="ti">Automotive Object Detection via Learning Sparse Events by Spiking Neurons</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2024</div><div class="ti">Spikformer V2: Join the High-Accuracy Club on ImageNet with an SNN Ticket</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2024</div><div class="ti">Spike-Driven Transformer V2: Meta SNN Architecture for Next-Gen Neuromorphic Chips</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2024</div><div class="ti">Neuromorphic Perception and Navigation for Mobile Robots: A Review</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2023</div><div class="ti">Advanced Efficient Strategy for Detection of Dark Objects with Spiking Multi-Box Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2023</div><div class="ti">Deep Directly-Trained Spiking Neural Networks for Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2023</div><div class="ti">Direct Training High-Performance SNNs for Object Recognition and Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2023</div><div class="ti">Spikformer: When Spiking Neural Network Meets Transformer</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2023</div><div class="ti">Spiking Neural Networks with Dynamic Time Steps for Vision Transformers</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2023</div><div class="ti">SODFormer: Streaming Object Detection with Transformer Using Events and Frames</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2022</div><div class="ti">SpikiLi: A Spiking Simulation of LiDAR-Based Real-Time Object Detection for Autonomous Driving</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2022</div><div class="ti">Multi-Patch Localization Spiking Neural Network for Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2022</div><div class="ti">Sparse Compressed Spiking Neural Network Accelerator for Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2022</div><div class="ti">Spiking Neural Network Based on Multi-Scale Saliency Fusion for Breast Cancer Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2021</div><div class="ti">Spiking Neuron Networks Based Energy-Efficient Object Detection for Mobile Robot</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="object_detection"><div class="yr">2020</div><div class="ti">Spiking-YOLO: Spiking Neural Network for Energy-Efficient Object Detection</div><div class="dm" data-d="object_detection">Object detection</div></div>
+    <div class="paper" data-domain="segmentation"><div class="yr">2025</div><div class="ti">SLTNet: Efficient Event-Based Semantic Segmentation with Spike-Driven Lightweight Transformers</div><div class="dm" data-d="segmentation">Segmentation</div></div>
+    <div class="paper" data-domain="segmentation"><div class="yr">2025</div><div class="ti">Spike2Former: Efficient Spiking Transformer for High-Performance Image Segmentation</div><div class="dm" data-d="segmentation">Segmentation</div></div>
+    <div class="paper" data-domain="segmentation"><div class="yr">2024</div><div class="ti">Spike-BRGNet: Event-Based Semantic Segmentation with Boundary Region-Guided SNNs</div><div class="dm" data-d="segmentation">Segmentation</div></div>
+    <div class="paper" data-domain="segmentation"><div class="yr">2024</div><div class="ti">Accurate &amp; Efficient Event-Based Semantic Segmentation with Adaptive Spiking Encoder–Decoder</div><div class="dm" data-d="segmentation">Segmentation</div></div>
+    <div class="paper" data-domain="depth_estimation"><div class="yr">2025</div><div class="ti">Spiking Depth: Depth Estimation from Sparse Events with Spiking Neural Networks</div><div class="dm" data-d="depth_estimation">Depth est.</div></div>
+    <div class="paper" data-domain="depth_estimation"><div class="yr">2025</div><div class="ti">SpikeStereoNet: A Brain-Inspired Framework for Stereo Depth Estimation from Spike Streams</div><div class="dm" data-d="depth_estimation">Depth est.</div></div>
+    <div class="paper" data-domain="depth_estimation"><div class="yr">2024</div><div class="ti">Event-Based Depth Prediction with Deep Spiking Neural Network</div><div class="dm" data-d="depth_estimation">Depth est.</div></div>
+    <div class="paper" data-domain="depth_estimation"><div class="yr">2024</div><div class="ti">Self-Supervised Event-Based Monocular Depth Estimation Using Cross-Modal Consistency</div><div class="dm" data-d="depth_estimation">Depth est.</div></div>
+  </div>
+  <p class="note reveal">Showing merged unique titles from the 43-paper included set (plus depth &amp; segmentation extensions). Full metadata and 1,100 references are managed in Zotero.</p>
+</section>
+
+<!-- REVIEW OUTLINE -->
+<section class="block section-alt">
+  <div class="eyebrow reveal">Manuscript</div>
+  <h2 class="reveal">Review Outline</h2>
+  <p class="intro reveal">The structure of the systematic review paper currently in preparation.</p>
+  <div class="reveal">
+    <div class="qa"><div class="num">1</div><div><h3>Introduction</h3><p>Autonomous-driving perception challenges, motivation for SNNs, key advantages (energy, temporal processing) and current limitations within neuromorphic computing.</p></div></div>
+    <div class="qa"><div class="num">2</div><div><h3>Background on Spiking Neural Networks</h3><p>Neuron models (LIF, IF), temporal dynamics, learning rules, event-driven processing, and comparison with ANNs.</p></div></div>
+    <div class="qa"><div class="num">3</div><div><h3>SNN Object-Detection Architectures</h3><p>Direct-training vs ANN-to-SNN conversion; YOLO variants and spiking transformers; architectural trade-offs.</p></div></div>
+    <div class="qa"><div class="num">4</div><div><h3>SNNs for Autonomous-Driving Applications</h3><p>Event cameras and LiDAR, multi-sensor fusion, real-time constraints and edge deployment.</p></div></div>
+    <div class="qa"><div class="num">5</div><div><h3>Energy Efficiency &amp; Performance Metrics</h3><p>Energy/latency metrics, accuracy–efficiency trade-offs, and comparison tables across benchmark datasets.</p></div></div>
+    <div class="qa"><div class="num">6</div><div><h3>Research Gaps &amp; Future Directions</h3><p>Standardised benchmarks, unified energy measurement, and the path to deployable spiking perception.</p></div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand"><svg class="mark" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.4"/><circle cx="18" cy="6" r="2.2"/><circle cx="18" cy="18" r="2.2"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg>Karthik S. Pasupuleti</div>
+  <div class="fnote">© 2026 Karthik Sai Pasupuleti · Spiking Vision-Language-Action · AImotion Bavaria, THI</div>
+  <div class="flinks"><a href="index.html">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a><a href="about.html">About</a></div>
+</footer>
+
+</main>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
